@@ -1,0 +1,1051 @@
+body {
+    background-color: #ffbdb7;
+    background-image: url("images/bg.png");
+    background-repeat: no-repeat;
+
+}
+
+/* Container for header elements */
+#header {
+    display: flex;
+    align-items: center;
+    /* Vertically align items */
+}
+
+/* Adjust logo dimensions */
+#header img {
+    width: 150px;
+    height: 150px;
+}
+
+/* Flex-grow for title to center it between logo and nav */
+#header h1 {
+    flex-grow: 1;
+    text-align: left;
+    margin: 0;
+    max-width: 400px;
+    font-size: xx-large;
+    color: #e15f55;
+    text-shadow: 0px 1.5px 39px #e15f55;
+
+}
+
+/* Remove default list styles and align navigation links */
+nav ul {
+    list-style: none;
+    display: flex;
+    /* Display links in a row */
+    margin-left: 0;
+    font-size: 24px;
+    font-family: "Open Sans", sans-serif;
+    overflow: hidden;
+    float: left;
+    margin-top: 90px;
+    margin-left: 70px;
+
+
+}
+
+/* Style navigation links */
+/* Adjust navigation link text style */
+nav ul li {
+    margin-left: 40px;
+    font-size: 25px;
+    ;
+    /* Increase font size */
+    font-weight: bold;
+    /* Make text bolder */
+    text-shadow: 4px 4px 35px #929292;
+    text-decoration: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    /* Remove underline from links */
+    color: #e15f55;
+    /* Set link color */
+    font-weight: bold;
+    /* Make link text bolder */
+}
+
+
+.contact-us {
+    background-color: #fc172e;
+    color: white;
+    border: none;
+    height: 36px;
+    width: 150px;
+    border-radius: 8px;
+    border-radius: 18px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    margin-left: 90px;
+    /*margin-top: 20px;*/
+    margin-top: 80px;
+    transition: box-shadow 0.15s;
+    vertical-align: top;
+    border-width: 3px;
+    border-style: solid;
+    border-color: #bd3a41;
+}
+
+.contact-us:hover {
+    border-radius: 15px;
+    background-color: #ff4f58;
+}
+
+.Home {
+    background-color: #ff0000;
+    background-image: url('images/Home.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 78vh;
+    /* Full height of the viewport */
+    padding: 20px;
+    margin-top: 0px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    /* Space out the .lines and .blur-card */
+    align-items: center;
+    /* Center content vertically */
+}
+
+.lines {
+    margin-left: 55px;
+    margin-top: 60px;
+}
+
+.lines h1 {
+    font-size: 50px;
+    font-family: 'Arial Narrow Bold', sans-serif;
+    padding-top: 1px;
+    color: #ff0019;
+    text-shadow: 6px 6px 9px #3f3f3f;
+}
+
+.blur-card {
+    width: 550px;
+    height: 600px;
+    margin-right: 25px;
+    border-radius: 26px;
+    box-shadow: 5px 5px 10px rgb(0 0 0 / 20%);
+    background: rgba(255, 255, 255, 0.1);
+    /* Semi-transparent background */
+    backdrop-filter: blur(10px);
+    /* Blur effect */
+    padding: 20px;
+    color: #333;
+    font-size: 18px;
+}
+
+.blur-card h2 {
+    margin-top: 0;
+    font-size: 1.5em;
+    color: #ff0019;
+    /* Color to match the blood donation theme */
+}
+
+.blur-card p {
+    font-size: 1em;
+    line-height: 1;
+}
+
+.donate {
+    background-color: #fc172e;
+    color: white;
+    border: none;
+    height: 50px;
+    width: 190px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 90px;
+    transition: box-shadow 0.15s;
+    vertical-align: top;
+    padding: 9px 15px;
+}
+
+
+/* This code is from feeding with love*/
+
+
+
+#contact-US,
+#foodbank_registration,
+#List_food_leftover {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+#foodbank_registration {
+    justify-content: center;
+    display: flex;
+    height: 140vh;
+    align-items: center;
+    padding: 10px;
+    background-image: url("images/bg.png");
+    background-repeat: no-repeat;
+
+}
+
+#foodbankinfo,
+#Personinof,
+#Services,
+#Logistics,
+#leftoverinfo {
+    background-image: url("images/bg.png");
+    background-repeat: no-repeat;
+}
+
+#foodbank_registration .Register,
+#list_food_leftover .Register {
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    background-color: #ff9684;
+    padding: 50px 30px;
+    margin: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    font-family: "Arial";
+
+}
+
+#foodbankinfo {
+    padding: 50px 80px;
+    margin-bottom: 0;
+}
+
+#List_food_leftover .container {
+    padding: 50px 20px;
+    margin-bottom: 0;
+}
+
+#contactus1 {
+    padding: 10px 30px;
+    margin-bottom: 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form .button {
+    height: 45px;
+    margin: 35px 0;
+}
+
+form .button input {
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+
+form .button input:hover {
+    background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+}
+
+#register-button,
+#list-button {
+    background-color: #fc172e;
+    color: white;
+    border: none;
+    height: 50px;
+    width: 190px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+    transition: box-shadow 0.15s;
+    padding: 9px 15px;
+    margin-bottom: 130px;
+}
+
+#register-button:hover,
+#list-button:hover {
+    opacity: 0.8;
+}
+
+#foodbankinfo {
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid black;
+    margin: 30px 0;
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #162938;
+    font-weight: 500;
+    pointer-events: none;
+}
+
+.input-box input {
+    width: 30%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+/* About Us section styling */
+.about-us {
+    text-align: center;
+    padding: 100px 70px;
+    margin-bottom: 200px;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    background-image: url("images/bg.png");
+    background-repeat: no-repeat;
+
+}
+
+.about-us h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.about-us .content {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.about-us .content p {
+    margin-bottom: 20px;
+    font-size: 1.1em;
+}
+
+/* camps section css*/
+
+
+
+
+#bloodcamp {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+
+.campstitle h1 {
+    font-size: 32px;
+    background-color: rgba(255, 99, 132, 0.2);
+    color: #ff1744;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.camp-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    max-width: 960px;
+    /* Control the total width for 3 cards per row */
+}
+
+.camp-card {
+    width: calc(33.33% - 20px);
+    /* 3 cards per row with gap */
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.camp-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.camp-info {
+    padding: 15px;
+}
+
+.place-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ff1744;
+    background-color: rgba(255, 99, 132, 0.1);
+    padding: 5px 10px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.camp-info p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.explore-btn {
+    background-color: #ff1744;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.explore-btn:hover {
+    background-color: #e0103c;
+}
+
+
+/*contactus section css*/
+.square5 {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+    box-shadow: 0px 0px 6px -2px;
+    margin: 10px;
+    border-radius: 15px;
+}
+
+.circle2 {
+    width: 50px;
+    height: 50px;
+    background-color: #ed0202;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#boxes {
+    display: flex;
+    margin: 10px;
+    justify-content: center;
+}
+
+.pannel {
+    width: 100%;
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.pattern {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+.Designtext {
+    text-align: center;
+    padding: 20px 0;
+}
+
+
+.Designtext span {
+    margin: 0 5px;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.DOT {
+    width: 10px;
+    border: none;
+    height: 10px;
+    background-color: #ed0202;
+    margin: 20px
+}
+
+.LINE {
+    width: 100px;
+    border: none;
+    height: 10px;
+    background-color: #ed0202;
+    margin: 20px, auto;
+}
+
+#contactus1 {
+    background-image: url("images/bg.png");
+    background-repeat: no-repeat;
+}
+
+
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700);
+
+* {
+    font-family: Open Sans;
+}
+
+
+
+.footer-distributed {
+    background: #666;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: bold 16px sans-serif;
+    padding: 55px 50px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right {
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left {
+    width: 40%;
+}
+
+/* The company logo */
+
+.footer-distributed h3 {
+    color: #ffffff;
+    font: normal 36px 'Open Sans', cursive;
+    margin: 0;
+}
+
+.footer-distributed h3 span {
+    color: #e15f55;
+    ;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links {
+    color: #ffffff;
+    margin: 20px 0 12px;
+    padding: 0;
+}
+
+.footer-distributed .footer-links a {
+    display: inline-block;
+    line-height: 1.8;
+    font-weight: 400;
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer-distributed .footer-company-name {
+    color: #222;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center {
+    width: 35%;
+}
+
+.footer-distributed .footer-center i {
+    background-color: #33383b;
+    color: #ffffff;
+    font-size: 25px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    margin: 10px 15px;
+    vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope {
+    font-size: 17px;
+    line-height: 38px;
+}
+
+.footer-distributed .footer-center p {
+    display: inline-block;
+    color: #ffffff;
+    font-weight: 400;
+    vertical-align: middle;
+    margin: 0;
+}
+
+.footer-distributed .footer-center p span {
+    display: block;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 2;
+}
+
+.footer-distributed .footer-center p a {
+    color: white;
+    text-decoration: none;
+    ;
+}
+
+.footer-distributed .footer-links a:before {
+    content: "|";
+    font-weight: 300;
+    font-size: 20px;
+    left: 0;
+    color: #fff;
+    display: inline-block;
+    padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+    content: none;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right {
+    width: 20%;
+}
+
+.footer-distributed .footer-company-about {
+    line-height: 20px;
+    color: #92999f;
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.footer-distributed .footer-company-about span {
+    display: block;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons {
+    margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color: #33383b;
+    border-radius: 2px;
+
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+
+    margin-right: 3px;
+    margin-bottom: 5px;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 880px) {
+
+    .footer-distributed {
+        font: bold 14px sans-serif;
+    }
+
+    .footer-distributed .footer-left,
+    .footer-distributed .footer-center,
+    .footer-distributed .footer-right {
+        display: block;
+    }
+}
+
+::placeholder {
+    color: black;
+    opacity: 1;
+}
+
+
+/* for blod group dropbox*/
+
+select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #ff9684;
+    /* Border color */
+    color: black;
+    /* Text color */
+    background-color: #ff9684;
+    /* Dropdown background color */
+    font-size: 16px;
+    width: 100%;
+    /* Adjust width as needed */
+}
+
+select option {
+    color: black;
+    /* Option text color remains black */
+    background-color: white;
+    /* Background for dropdown options */
+}
+
+label {
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(255, 0, 0);
+    /* Label color */
+}
+
+/* for Phone number css*/
+
+
+.phone-input {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    width: fit-content;
+}
+
+.phone-input span {
+    margin-right: 5px;
+    color: #333;
+    font-weight: bold;
+}
+
+.phone-input input {
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+
+
+
+/* Small devices (phones, 600px and below) */
+@media (max-width: 600px) {
+    #header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #header img {
+        width: 120px;
+        height: 120px;
+    }
+
+    #header h1 {
+        font-size: 24px;
+        text-align: center;
+        max-width: none;
+    }
+
+    nav ul {
+        margin-top: 20px;
+        margin-left: 0;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin-left: 20px;
+        font-size: 18px;
+    }
+
+    .contact-us,
+    .donate,
+    #register-button,
+    #list-button {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 20px;
+        font-size: 18px;
+    }
+
+    .Home {
+        flex-direction: column;
+        justify-content: center;
+        height: auto;
+    }
+
+    .lines h1 {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .blur-card {
+        width: 90%;
+        height: auto;
+        margin-right: 0;
+    }
+
+    .about-us {
+        padding: 50px 20px;
+    }
+
+    .container {
+        padding: 20px 15px;
+    }
+
+    .camp-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .camp-card {
+        width: 100%;
+        /* Full width for smaller screens */
+        margin-bottom: 20px;
+    }
+
+    .input-box input {
+        width: 100%;
+        /* Full width input for small screens */
+    }
+
+    .footer-distributed {
+        padding: 20px;
+        font-size: 14px;
+    }
+
+    .footer-distributed .footer-left,
+    .footer-distributed .footer-center,
+    .footer-distributed .footer-right {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-distributed .footer-left,
+    .footer-distributed .footer-center {
+        margin-bottom: 20px;
+    }
+}
+
+/* Medium devices (tablets, between 600px and 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    #header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #header img {
+        width: 130px;
+        height: 130px;
+    }
+
+    #header h1 {
+        font-size: 28px;
+        text-align: left;
+        max-width: 300px;
+    }
+
+    nav ul {
+        margin-top: 40px;
+        justify-content: center;
+    }
+
+    nav ul li {
+        font-size: 20px;
+    }
+
+    .contact-us,
+    .donate,
+    #register-button,
+    #list-button {
+        width: 100%;
+        font-size: 18px;
+        margin-top: 15px;
+    }
+
+    .Home {
+        flex-direction: column;
+        justify-content: center;
+        height: 70vh;
+    }
+
+    .lines h1 {
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .blur-card {
+        width: 80%;
+        height: auto;
+        margin-right: 0;
+    }
+
+    .container {
+        padding: 30px 20px;
+    }
+
+    .camp-container {
+        flex-direction: row;
+        gap: 15px;
+    }
+
+    .camp-card {
+        width: calc(50% - 15px);
+        /* Two cards per row */
+    }
+
+    .input-box input {
+        width: 100%;
+    }
+
+    .footer-distributed {
+        padding: 40px;
+        font-size: 15px;
+    }
+
+    .footer-distributed .footer-left,
+    .footer-distributed .footer-center,
+    .footer-distributed .footer-right {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Large devices (desktops, 1024px and above) */
+@media (min-width: 1025px) {
+    #header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #header img {
+        width: 150px;
+        height: 150px;
+    }
+
+    #header h1 {
+        font-size: xx-large;
+        text-align: left;
+        max-width: 400px;
+    }
+
+    nav ul {
+        margin-left: 70px;
+        margin-top: 90px;
+        justify-content: flex-start;
+    }
+
+    nav ul li {
+        font-size: 25px;
+        margin-left: 40px;
+    }
+
+    .contact-us,
+    .donate,
+    #register-button,
+    #list-button {
+        width: auto;
+        font-size: 20px;
+    }
+
+    .Home {
+        height: 80vh;
+        flex-direction: row;
+    }
+
+    .lines h1 {
+        font-size: 50px;
+    }
+
+    .blur-card {
+        width: 550px;
+        height: 600px;
+        margin-right: 25px;
+    }
+
+    .container {
+        padding: 100px 80px;
+    }
+
+    .camp-container {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .camp-card {
+        width: calc(33.33% - 20px);
+        /* Three cards per row */
+    }
+
+    .footer-distributed {
+        padding: 55px 50px;
+        font-size: 16px;
+    }
+
+    .footer-distributed .footer-left,
+    .footer-distributed .footer-center,
+    .footer-distributed .footer-right {
+        display: inline-block;
+        width: 33%;
+        text-align: left;
+    }
+
+    .footer-distributed .footer-left {
+        width: 40%;
+    }
+
+    .footer-distributed .footer-center {
+        width: 35%;
+    }
+
+    .footer-distributed .footer-right {
+        width: 65%;
+    }
+}
