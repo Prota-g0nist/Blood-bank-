@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Bank</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <script>
+        // Smooth scrolling for navigation links
+document.querySelectorAll('nav ul li a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetSection = document.querySelector(this.getAttribute('href'));
+        if (targetSection) {
+            targetSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+});
+
+// Smooth scrolling for buttons
+document.querySelectorAll('button.contact-us, button.donate').forEach(button => {
+    button.addEventListener('click', function () {
+        const targetId = this.getAttribute('href') || '#foodbank_registration';
+        const targetSection = document.querySelector(targetId);
+        if (targetSection) {
+            targetSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+});
+
+// Form validation for registration and request forms
+function validateForm(event) {
+    const form = event.target;
+    const inputs = form.querySelectorAll('input[required], select[required]');
+    let isValid = true;
+
+    inputs.forEach(input => {
+        if (!input.value) {
+            isValid = false;
+            input.style.border = '2px solid red';
+        } else {
+            input.style.border = '1px solid #ccc';
+        }
+    });
+
+    if (!isValid) {
+        event.preventDefault();
+        alert('Please fill out all required fields.');
+    }
+}
+
+document.querySelector('#foodbank_registration form').addEventListener('submit', validateForm);
+document.querySelector('#List_food_leftover form').addEventListener('submit', validateForm);
+document.querySelector('#contact-US form').addEventListener('submit', validateForm);
+
+// Explore button interactions
+document.querySelectorAll('.explore-btn').forEach(button => {
+    button.addEventListener('click', () => {
+        alert('Explore more about this blood camp!');
+    });
+});
+
+// Highlight active navigation link based on scroll position
+const sections = document.querySelectorAll('section');
+const navLinks = document.querySelectorAll('nav ul li a');
+
+window.addEventListener('scroll', () => {
+    let currentSection = '';
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (pageYOffset >= sectionTop - sectionHeight / 3) {
+            currentSection = section.getAttribute('id');
+        }
+    });
+
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${currentSection}`) {
+            link.classList.add('active');
+        }
+    });
+});
+
+    </script>
+
+    <section id="home">
+        <div id="header">
+            <img src="images/logo.jpg" alt="Logo">
+            <h1>Blood Bank</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#foodbank_registration">Donor Registration</a></li>
+                    <li><a href="#List_food_leftover">Blood Request</a></li>
+                    <li><a href="#About_us">About Us</a></li>
+                    <li><a href="#bloodcamp">Blood Camp</a></li>
+                </ul>
+                <a href="#contact-US"><button class="contact-us">Contact Us</button></a>
+            </nav>
+        </div>
+
+        <div class="Home">
+            <div class="lines">
+                <h1>Be Grateful <br> Donate<br> Blood<br> Give Blood Save Lives</h1>
+                <button class="donate">Donate Blood &#x2192;</button>
+            </div>
+            <div class="blur-card">
+                <h2>Why Donate Blood?</h2>
+                <p>
+                    Blood donation is important because it helps save lives and improves the quality of life for patients:
+                <h2>Lifeline for patients</h2>
+                Blood donation is essential for patients undergoing surgery, managing chronic illnesses, battling cancer, and coping with trauma.
+                <h2>Improves quality of life</h2>
+                Blood transfusions can improve the life expectancy and quality of life for patients with a variety of conditions.
+                <h2>Therapeutic phlebotomy</h2>
+                For people with rare conditions like polycythemia vera and hereditary hemochromatosis, donating blood can be therapeutic.
+                <h2>Helps the community</h2>
+                Donating blood can help the most vulnerable people in your community.
+                <h2>Positive health outcomes</h2>
+                Altruistic acts like donating blood can lead to positive health outcomes, including a lower risk for depression and greater longevity.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <section id="foodbank_registration">
+            <form action="register.php" method="post">
+                <div id="foodbankinfo" class="container">
+                    <h2>Please Register for Blood Donate</h2>
+                    <div class="input-box">
+                        <label for="foodbank-name"></label>
+                        <input type="text" id="Name" name="Name" placeholder="Your Name" required>
+                    </div>
+                    <div class="input-box" id="dropbox">
+                        <label for="Blood-Group"></label>
+                        <select id="Blood_Group" name="Blood_Group">
+                            <option value="" disabled selected>Select your blood group</option>
+                            <option value="A+">A+</option>
+                            <option value="A-">A-</option>
+                            <option value="B+">B+</option>
+                            <option value="B-">B-</option>
+                            <option value="AB+">AB+</option>
+                            <option value="AB-">AB-</option>
+                            <option value="O+">O+</option>
+                            <option value="O-">O-</option>
+                        </select>
+                    </div>
+                    <div class="input-box">
+                        <label for="Date"></label>
+                        <input type="date" id="Date" name="Date" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="phone"></label>
+                        <input type="number" id="Phone_Number" name="Phone_Number" placeholder="Phone Number" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="email"></label>
+                        <input type="email" id="Email" name="Email" placeholder="Email Address" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="Address"></label>
+                        <input type="text" id="Address" name="Address" placeholder="Address">
+                    </div>
+                </div>
+                <br>
+                <button type="submit" id="register-button">Submit</button>
+            </form>
+        </section>
+        <section id="List_food_leftover">
+            <form action="Blood_request.php" method="post">
+                <div id="leftoverinfo" class="container" style="width: 650px;">
+                    <h2>Place Your Request<br>
+                        For Blood</h2>
+                    <div class="input-box">
+                        <label for="foodbank-name"></label>
+                        <input type="text" id="Name" name="Name" placeholder="Your Name" required>
+                    </div>
+                    <div class="input-box" id="dropbox">
+                        <label for="blood_group"></label>
+                        <select id="Blood_Group" name="Blood_Group">
+                            <option value="" disabled selected>Select your blood group</option>
+                            <option value="A+">A+</option>
+                            <option value="A-">A-</option>
+                            <option value="B+">B+</option>
+                            <option value="B-">B-</option>
+                            <option value="AB+">AB+</option>
+                            <option value="AB-">AB-</option>
+                            <option value="O+">O+</option>
+                            <option value="O-">O-</option>
+                        </select>
+
+                    </div>
+                    <div class="input-box">
+                        <label for="date"></label>
+                        <input type="date" id="Date" name="Date" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="Amount of Blood"></label>
+                        <input type="text" id="Amoun_of_blood" name="Amount_of_blood" placeholder="Amount Of Blood ( IN Litres)" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="Address"></label>
+                        <input type="text" id="Address" name="Address" placeholder="Address">
+                    </div>
+                    <div class="input-box">
+                        <label for="phone"></label>
+                        <input type="number" id="Phone_Number" name="Phone_Number" placeholder="Phone Number" required>
+                    </div>
+                </div>
+                <br>
+                <button type="submit" id="list-button">Submit</button>
+            </form>
+        </section>
+        <section id="About_us">
+            <section id="About_us">
+                <form>
+                    <div class="container about-us">
+                        <h2>About Us</h2>
+                        <div class="content">
+                            <p>
+                                We are dedicated to saving lives by bridging the gap between blood donors and those in need. Founded with a mission to make blood donation accessible and encourage community participation, our organization plays a vital role in healthcare by ensuring a reliable supply of safe blood and blood products.
+                            </p>
+                            <p>
+                                Every drop donated helps save lives and brings hope to patients battling life-threatening conditions, accidents, and surgeries.
+                            </p>
+                            <p>
+                                Our vision is a community where no patient has to wait for the blood they need. With the support of our dedicated donors, volunteers, and medical partners, we work tirelessly to create a sustainable blood supply network.
+                            </p>
+                            <p>
+                                From organizing regular donation camps to providing online resources and support, We are here to make the donation process easy, secure, and impactful.
+                            </p>
+                        </div>
+                    </div>
+                </form>
+            </section>
+            <section id="bloodcamp">
+                <div class="camp-container">
+                    <!-- Card 1 -->
+                    <div class="camp-card">
+                        <img src="images/camp1.jpg" alt="Blood Donation Camp">
+                        <div class="camp-info">
+                            <div class="place-name">City Hospital, Downtown</div>
+                            <p>Join us to help save lives in your community. Every drop counts!</p>
+                            <a href="https://downtownhospitals.in/" > <button class="explore-btn">Explore →</button></a>
+                        </div>
+                    </div>
+                
+                    <!-- Card 2 -->
+                    <div class="camp-card">
+                        <img src="images/camp2.jpg" alt="Blood Donation Camp">
+                        <div class="camp-info">
+                            <div class="place-name">Community Center, Greenfield</div>
+                            <p>Donate blood, give hope. Your contribution can save multiple lives.</p>
+                            <a href="https://www.ci.greenfield.wi.us/809/Greenfield-Community-Center" > <button class="explore-btn">Explore →</button></a>
+                        </div>
+                    </div>
+                
+                    <!-- Card 3 -->
+                    <div class="camp-card">
+                        <img src="images/camp3.jpg" alt="Blood Donation Camp">
+                        <div class="camp-info">
+                            <div class="place-name">Health Clinic, Riverside</div>
+                            <p>Be a hero today! Help those in need by donating blood at our camp.</p>
+                            <a href="https://www.ruhealth.org/medical-center/medical-services/mobile-health-clinic" > <button class="explore-btn">Explore →</button></a>
+                        </div>
+                    </div>
+                
+                    <!-- Card 4 -->
+                    <div class="camp-card">
+                        <img src="images/camp4.jpg" alt="Blood Donation Camp">
+                        <div class="camp-info">
+                            <div class="place-name">Wellness Center, Lakeside</div>
+                            <p>Save a life today – give blood and make a lasting difference.</p>
+                            <a href="https://lakesidewellness.com.au/" > <button class="explore-btn">Explore →</button></a>
+                        </div>
+                    </div>
+                
+                    <!-- Card 5 -->
+                    <div class="camp-card">
+                        <img src="images/camp5.jpg" alt="Blood Donation Camp">
+                        <div class="camp-info">
+                            <div class="place-name">City Hall, Oakwood</div>
+                            <p>Every donation counts! Join us to support emergency and trauma care.</p>
+                            <a href="https://oakwoodohio.gov/" > <button class="explore-btn">Explore →</button></a>
+                        </div>
+                    </div>
+                
+                    <!-- Card 6 -->
+                    <div class="camp-card">
+                        <img src="images/camp6.jpg" alt="Blood Donation Camp">
+                        <div class="camp-info">
+                            <div class="place-name">University Campus, Midtown</div>
+                            <p>Help make a difference. Your blood donation could save up to three lives.</p>
+                            <a href="https://studyoncampus.com/midtown/" > <button class="explore-btn">Explore →</button></a>
+                        </div>
+                    </div>
+                </div>
+                
+            </section>
+
+            <section id="contact-US">
+                <form action="Contact.php" method="post">
+                    <div class="container" id="contactus1">
+
+                        <div class="pannel">
+                            <div class="Designtext">
+                                <span><strong>Contact</strong></span> <span><strong>Us</strong></span>
+                            </div>
+                            <div class="pattern">
+                                <hr class="LINE">
+                                <hr class="DOT">
+                                <hr class="LINE">
+                            </div>
+
+                        </div>
+                        <div id="boxes">
+                            <div class="square5">
+                                <div class="circle2">
+                                    <i class="fa fa-file"></i>
+                                </div>
+                                <h3>Address:</h3>
+                                <p>1073 w stephen ave, clawson</p>
+                            </div>
+
+                            <div class="square5">
+                                <div class="circle2">
+                                    <i class="fa fa-file"></i>
+                                </div>
+                                <h3>Call Us:</h3>
+                                <p>+1 200-22-4444</p>
+                            </div>
+
+                            <div class="square5">
+                                <div class="circle2">
+                                    <i class="fa fa-file"></i>
+                                </div>
+                                <h3>E-mail:</h3>
+                                <p><e-mail> Bloddbank@gmail.com </e-mail></p>
+                            </div>
+                        </div>
+
+                        <div class="clearfix"></div>
+
+
+
+                        <div class="input-box">
+                            <label for="Your-Full-name"></label>
+                            <input type="text" name="Name" id="Name" placeholder="Your Full name">
+                        </div>
+                        <div class="input-box">
+                            <label for="your-email"></label>
+                            <input type="text" name="Email" id="Email" placeholder="Your Email">
+                        </div>
+                        <div class="input-box">
+                            <label for="Your-Phone-no."></label>
+                            <input type="number" name="Phone_Number" id="Phone_Number" placeholder="Your Phone no.">
+                        </div>
+                        <div class="input-box">
+                            <label for="your-message"></label>
+                            <input type="text" name="Message" id="Message" placeholder="Your Message">
+                        </div>
+
+
+                        <div class="clearfix"></div>
+                    </div>
+                    <br>
+                    <button type="submit" id="list-button">Send</button>
+                </form>
+
+            </section>
+
+            <!-- Other sections continue here in similar structure -->
+
+    </main>
+
+    <footer class="footer-distributed">
+        <div class="footer-left">
+            <h3>Blood<span> Bank </span></h3>
+            <p class="footer-links">
+                <a href="#" class="link-1">Home</a>
+                <a href="#foodbank_registration">Blood Donate</a>
+                <a href="#List_food_leftover">Request Blood</a>
+                <a href="#About_us">About us </a>
+                <a href="#bloodcamp">Blood Camps </a>
+                <a href="#contact-US">Contact Us</a>
+            </p>
+            <p class="footer-company-name">Blood Bank © 2024</p>
+        </div>
+        <div class="footer-center">
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p>1073 w stephen ave, clawson</p>
+            </div>
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>+1 200-22-4444</p>
+            </div>
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:support@company.com">BloodBank@gmail.com</a></p>
+            </div>
+        </div>
+        <div class="footer-right">
+            <p class="footer-company-about">
+                <span>About the Blood Bank</span>
+                We are dedicated to saving lives by bridging the gap between blood donors and those in need.
+                Founded with a mission to make blood donation accessible and encourage community participation,
+                our organization plays a vital role in healthcare by ensuring a reliable supply of safe blood and blood products.
+            </p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
